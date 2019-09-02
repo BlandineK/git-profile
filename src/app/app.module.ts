@@ -5,6 +5,7 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { HttpClientModule } from '@angular/common/http';  
 import { PictureComponent } from './picture/picture.component';
+import { PictureService } from 'services/picture.service';
 @NgModule({
   declarations: [
     AppComponent,
@@ -15,7 +16,7 @@ import { PictureComponent } from './picture/picture.component';
     AppRoutingModule,
     HttpClientModule
   ],
-  providers: [],
+  providers: [PictureService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
