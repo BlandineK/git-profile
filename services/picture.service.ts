@@ -9,13 +9,13 @@ export class PictureService {
   
   constructor(private http:HttpClient) { 
     console.log("The app is now ready");
-    this.gitUsersProfile = 'BlandineK';
+    this.gitUsersProfile = '';
   }
   getProfileInfo(){
-    return this.http.get ("https://api.github.com/users/" + this.gitUsersProfile + "?access_token=" + this.clientsecret) 
+   return this.http.get ("https://api.github.com/users/" + this.gitUsersProfile + "?access_token=" + this.clientsecret) 
   }
   getProfileRepos(){
-    return this.http.get ("https://api.github.com/users/" + this.gitUsersProfile + "/repos?access_token=" + this.clientsecret); 
+   return this.http.get ("https://api.github.com/users/" + this.gitUsersProfile + "/repos?access_token=" + this.clientsecret) 
   }
  updateProfile(gitUsersProfile:string){
    this.gitUsersProfile = gitUsersProfile;

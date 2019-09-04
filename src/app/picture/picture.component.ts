@@ -17,12 +17,13 @@ findProfile(){
   this.picture = picture;
   
  });
+ this.pictureService.getProfileRepos().subscribe(repos => {console.log(repos)
+  this.repos = repos;
+  }); 
  
 }
   ngOnInit() {
-    this.pictureService.getProfileRepos().subscribe(repos => {console.log(repos);
-    this.repos = repos;
-    }); 
+    
   }
 
 }
