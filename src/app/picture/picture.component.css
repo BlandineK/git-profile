@@ -1,15 +1,15 @@
-.search-form{
+/* .search-form{
     padding-top:51px;
     background-image:url(https://www.elsetge.cat/myimg/f/4-48486_latest-hd-nature-wallpaper-beautiful-background.jpg);
     width:100%;
     height:800px;
     padding-top:400px;
     
-}
-/* input{
+} */
+input{
     width:350px;
     margin-left: 200px;
-} */
+}
 #ni{
     text-align: center;
     font-family:italic;
