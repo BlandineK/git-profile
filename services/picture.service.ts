@@ -4,15 +4,21 @@ import { HttpClient} from '@angular/common/http';
   providedIn: 'root'
 })
 export class PictureService {
-  private username:string;
-  private clientid='459c220d37570c29aa28';
-  private clientsecret='dd02d8b3ce547564cb08903dce92a466e18c8b63';
+  private gitUsersProfile:string;
+  private clientsecret='7f81812040cdff557f4ba6bac814068348490b9c';
   
   constructor(private http:HttpClient) { 
     console.log("The app is now ready");
-    this.username = 'BlandineK';
+    this.gitUsersProfile = 'BlandineK';
   }
   getProfileInfo(){
-    return this.http.get ("https://api.github.com/users/BlandineK" + "client_id= " + this.clientid + "&client_secret=" + this.clientsecret); 
+    return this.http.get ("https://api.github.com/users/" + this.gitUsersProfile + "?access_token=" + this.clientsecret) 
   }
+  getProfileRepos(){
+    return this.http.get ("https://api.github.com/users/" + this.gitUsersProfile + "/repos?access_token=" + this.clientsecret); 
+  }
+ updateProfile(gitUsersProfile:string){
+   this.gitUsersProfile = gitUsersProfile;
+   
+ } 
 }

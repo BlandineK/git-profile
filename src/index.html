@@ -7,14 +7,19 @@
 
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <link rel="icon" type="image/x-icon" href="favicon.ico">
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+  <!-- <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">  -->
+  <!-- <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous"> -->
 </head>
 <body style="background-image:url(https://images.pexels.com/photos/479384/pexels-photo-479384.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500);background-repeat: no-repeat;background-size: cover;height:10%;width:200px">
-  <form class="example" action="/action_page.php">
+  <!-- <form class="example" action="/action_page.php">
     <input type="text" placeholder="Search.." name="search">
     <button type="submit"><i class="fa fa-search"></i></button>
-  </form>
-   <app-root></app-root>
+  </form> -->
+  <form action="" class="search-form ">
+    <div class="form-group"> 
+        <input type="text" class="form-control" placeholder="Search git users profile" [(ngModel)]="gitUsersProfile" name="gitUsersProfile"(keyup)="findProfile()">
+    </div>
+</form>
+  <app-root></app-root>
 </body>
 </html>

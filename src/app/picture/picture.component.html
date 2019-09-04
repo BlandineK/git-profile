@@ -1,36 +1,52 @@
 <!-- <p>picture works!</p> -->
+<!-- <form action="" class="search-form ">
+    <div class="form-group"> 
+        <input type="text" class="form-control" placeholder="Search git users profile" [(ngModel)]="gitUsersProfile" name="gitUsersProfile"(keyup)="findProfile()">
+    </div>
+</form> -->
+<div class="container">
 <div *ngIf ="picture">
  <div class="panel panel-default">
   <div class="panel-heading">
      {{picture.name}} <small>({{picture.login}})</small>   
-    <span *ngIf="profile.company">,Works at  {{picture.company}}</span>
+    <span *ngIf="picture.company">,Works at  {{picture.company}}</span>
      {{picture.location}}
 </div>
 <div class="panel-body">
     <div class="row">
         <div class="col-sm-3">
             <img src="{{picture.avatar_url}}" class="img-circle img-responsive" alt="Profile Image">
-      </div>
-    <div class="col-sm-5">
+        </div>
+     <div class="col-sm-5">
         <ul class="list-group">
            <li class="list-group-item" *ngIf="picture.bio">{{picture.bio}}</li>
            <li class="list-group-item" *ngIf="picture.hireable">Available for hire</li>
-           <li class="list-group-item" *ngIf="picture.blog">{{picture.blog}}</li>
-           <li class="list-group-item" *ngIf="picture.email">{{picture.email}}</li>
-
-        
-        
+           <li class="list-group-item" *ngIf="picture.blog"><a href="{{picture.blog}}" target="_blank">{{picture.blog}}</a></li>
+           <li class="list-group-item" *ngIf="picture.email"><a href="{{picture.email}}" target="blank">{{picture.email}}</a></li>
         </ul>
-    </div>
-    
-    </div>
+     </div>
+    <div class="col-sm-4">
+            <p>
+                <span class="label label-default">{{picture.followers}} Followers</span>
+                <span class="label label-success">{{picture.following}} Following</span>
+                <span class="label label-primary">{{picture.public_gists}} Public_gists</span>
+                <span class="label label-info">{{picture.public_repos}} Public_repos</span>
+          </p>
+          <p><a href="{{picture.html_url}}" target="blank" class="btn btn-success btn-sm">View Profile</a></p>
+          <div class="panel panel-default">
+              <div class="panel-heading">
+                  <h2 class="panel-title">Repos</h2>
+              </div>
+              <div class="panel-body" *ngFor="let repo of repos">
+                  <p>
+                      {{repo.name}}<a href="{{repo.html_url}}" class="btn btn-sm btn-warning">View the project on github</a></p>
+                  <p>{{repo.description}}</p>
+               
+              </div>
+          </div>
+        </div>
+      </div>
+     </div>
+    </div>    
+ </div>
 </div>
-
-
-
-
-
-
- </div>    
-</div>
- 

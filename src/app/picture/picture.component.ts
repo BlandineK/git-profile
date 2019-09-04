@@ -7,14 +7,22 @@ import { PictureService } from 'services/picture.service';
   styleUrls: ['./picture.component.css']
 })
 export class PictureComponent implements OnInit {
- picture ; 
+ picture:any; 
+ repos:any;
+ gitUsersProfile:string;
   constructor(private pictureService: PictureService) { 
-     this.pictureService.getProfileInfo().subscribe(picture => {console.log(picture);
-     this.picture = picture;
-     
-    });
-  }
+}
+findProfile(){
+ this.pictureService.updateProfile(this.gitUsersProfile);this.pictureService.getProfileInfo().subscribe(picture => {console.log(picture);
+  this.picture = picture;
+  
+ });
+ 
+}
   ngOnInit() {
+    this.pictureService.getProfileRepos().subscribe(repos => {console.log(repos);
+    this.repos = repos;
+    }); 
   }
 
 }
