@@ -25,7 +25,7 @@
            <li class="list-group-item" *ngIf="picture.email"><a href="{{picture.email}}" target="blank">{{picture.email}}</a></li>
         </ul>
         </div>
-            <!-- <div class="col-lg-6"> -->
+            <div class="col-lg-6">
             <p>
                 <span class="label label-default">{{picture.followers}} Followers</span>
                 <span class="label label-success">{{picture.following}} Following</span>
@@ -36,12 +36,12 @@
     
                   <h2 class="panel-title">Repos</h2>
               </div>
-              <div *ngFor="let repo of repos">
+              <!-- <div *ngFor="let repo of repos">
                   <p>
                       {{repo.name}}<br><a href="{{repo.html_url}}" class="btn btn-sm btn-warning">View the project on github</a></p>
                   <p>{{repo.description}}</p>
                
-              </div>
+              </div> -->
           </div>
          
    </div>
