@@ -16,7 +16,7 @@
     </div>
     
         
-            <!-- <img src="{{picture.avatar_url}}" class="img-circle img-responsive" alt="Profile Image"> -->
+            <img src="{{picture.avatar_url}}" class="img-circle img-responsive" alt="Profile Image">
 
           <ul class="list-group">
            <li class="list-group-item" *ngIf="picture.bio">{{picture.bio}}</li>
@@ -25,7 +25,7 @@
            <li class="list-group-item" *ngIf="picture.email"><a href="{{picture.email}}" target="blank">{{picture.email}}</a></li>
         </ul>
         </div>
-            <div class="col-lg-6">
+            <!-- <div class="col-lg-6"> -->
             <p>
                 <span class="label label-default">{{picture.followers}} Followers</span>
                 <span class="label label-success">{{picture.following}} Following</span>
