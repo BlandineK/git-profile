@@ -1,4 +1,5 @@
-# Gits
+
+##Github User Profile Search
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 8.3.0.
 
@@ -25,3 +26,11 @@ Run `ng e2e` to execute the end-to-end tests via [Protractor](http://www.protrac
 ## Further help
 
 To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI README](https://github.com/angular/angular-cli/blob/master/README.md).
+
+## Description
+
+This project is about Github User Profile Search where you can enter the username of a github user and then get all the information from his/her account such as repositories,bio,and you can also view his/her profile . 
+
+#License
+
+ Copyright(c) 2019 BlandineK. All rights reserved 
