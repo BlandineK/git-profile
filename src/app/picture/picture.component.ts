@@ -12,16 +12,16 @@ export class PictureComponent implements OnInit {
  gitUsersProfile:string;
   constructor(private pictureService: PictureService) { 
 }
-findProfile(){
- this.pictureService.updateProfile(this.gitUsersProfile);this.pictureService.getProfileInfo().subscribe(picture => {console.log(picture);
-  this.picture = picture;
+// findProfile(){
+//  this.pictureService.updateProfile(this.gitUsersProfile);this.pictureService.getProfileInfo().subscribe(picture => {console.log(picture);
+//   this.picture = picture;
   
- });
- this.pictureService.getProfileRepos().subscribe(repos => {console.log(repos)
-  this.repos = repos;
-  }); 
+//  });
+//  this.pictureService.getProfileRepos().subscribe(repos => {console.log(repos)
+//   this.repos = repos;
+//   }); 
  
-}
+// }
   ngOnInit() {
     
   }
